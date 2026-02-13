@@ -1,0 +1,43 @@
+\section{Архитектура мультиверса и функционал}
+
+\subsection{Мультииндексы и пространства состояний}
+
+Пусть задана иерархия уровней $l=0,1,\dots,K$. Каждый объект идентифицируется мультииндексом
+\[
+\mathbf{a} = (a_0,a_1,\dots,a_l),\quad 0\le l\le K,
+\]
+где $a_0$ -- индекс домена на уровне $0$, $a_1$ -- индекс мета-системы и т.д. Размерность мультииндекса $\dim(\mathbf{a})=l$ означает, что объект принадлежит уровню $l$.
+
+Каждому мультииндексу $\mathbf{a}$ сопоставлено гильбертово пространство $\mathcal{H}^{(\mathbf{a})}$. Для уровня $l$ полное пространство задаётся как
+\[
+\mathcal{H}^{(l)} = \bigotimes_{\dim(\mathbf{a})=l} \mathcal{H}^{(\mathbf{a})},
+\]
+а полное пространство мультиверса
+\[
+\mathcal{H}_{\text{multiverse}} = \bigotimes_{l=0}^{K} \mathcal{H}^{(l)}.
+\]
+
+\subsection{Цели, проекторы и пена}
+
+Для каждого уровня $l$ и мультииндекса $\mathbf{a}$ размерности $l$ фиксируется цель $G_l^{(\mathbf{a})}$ как подпространство в $\mathcal{H}^{(\mathbf{a})}$ с проектором $\mathcal{P}_{G_l^{(\mathbf{a})}}$. Иерархия целей согласована, если
+\[
+\mathcal{P}_{G_l^{(\mathbf{a})}} = \bigotimes_{\mathbf{b}\prec \mathbf{a}} \mathcal{P}_{G_{l-1}^{(\mathbf{b})}},\quad l\ge 1,
+\]
+где $\mathbf{b}\prec\mathbf{a}$ означает, что $\mathbf{b}$ входит в разложение $\mathbf{a}$ на подсистемы уровня $l-1$.
+
+Пеной уровня $l$ называем функционал
+\[
+\Phi^{(l)}(\Psi^{(l)},G_l) = \sum_{\substack{\mathbf{a}\neq \mathbf{b}\\ \dim(\mathbf{a})=\dim(\mathbf{b})=l}} \left|\left\langle \Psi^{(\mathbf{a})}\middle|\mathcal{P}_{G_l}\middle|\Psi^{(\mathbf{b})}\right\rangle\right|^2.
+\]
+
+Глобальный функционал качества состояния мультиверса задаётся как
+\[
+J_{\text{multiverse}}(\boldsymbol{\Psi}) = \sum_{l=0}^{K} \Lambda_l \sum_{\dim(\mathbf{a})=l} J^{(l)}(\Psi^{(\mathbf{a})}),
+\]
+\[
+\Lambda_l = \lambda_0 \alpha^l,\quad 0<\alpha<1,
+\]
+\[
+J^{(0)}(\Psi^{(\mathbf{a})}) = J_{\text{loc}}(\Psi^{(\mathbf{a})};G_0^{(\mathbf{a})}),\quad
+J^{(l)}(\Psi^{(\mathbf{a})}) = \sum_{\mathbf{b}\prec\mathbf{a}} J^{(l-1)}(\Psi^{(\mathbf{b})}) + \Phi^{(l)}(\Psi^{(\mathbf{a})},G_l^{(\mathbf{a})}).
+\]

@@ -1,0 +1,49 @@
+\section{Суперпозиция противоположностей}
+
+\subsection{Формализация дуальности и оператор отражения}
+
+Рассмотрим на уровне $0$ домен $\mathbf{a}_0$ с двумя ортогональными состояниями
+\[
+|A\rangle, |B\rangle \in \mathcal{H}^{(\mathbf{a}_0)},\quad \langle A|B\rangle = 0,
+\]
+которые интерпретируются как противоположности (добро/зло, история/контрфакт и т.п.).
+
+Введём оператор отражения $R$:
+\[
+R|A\rangle = |B\rangle,\quad R|B\rangle = |A\rangle,\quad R^\dagger = R,\quad R^2 = I.
+\]
+Его собственные векторы:
+\[
+|+\rangle = \frac{|A\rangle + |B\rangle}{\sqrt{2}},\quad R|+\rangle = +|+\rangle,
+\]
+\[
+|-\rangle = \frac{|A\rangle - |B\rangle}{\sqrt{2}},\quad R|-\rangle = -|-\rangle.
+\]
+
+\subsection{Теорема о суперпозиции противоположностей}
+
+\begin{theorem}
+Пусть:
+\begin{itemize}
+  \item на уровне $0$ заданы ортогональные $|A\rangle,|B\rangle\in\mathcal{H}^{(\mathbf{a}_0)}$;
+  \item на некотором уровне $l\ge 1$ существует цель $G_l^{(\mathbf{a})}$ с проектором $\mathcal{P}_{G_l^{(\mathbf{a})}}$, для которого
+  \[
+  [\mathcal{P}_{G_l^{(\mathbf{a})}},R]=0,\quad R^2=I;
+  \]
+  \item $\mathcal{P}_{G_l^{(\mathbf{a})}}$ действует ненулево на линейную оболочку $\mathrm{Span}\{|A\rangle,|B\rangle\}$:
+  \[
+  \mathcal{P}_{G_l^{(\mathbf{a})}}(|A\rangle+|B\rangle)\neq 0.
+  \]
+\end{itemize}
+Тогда существует нормированный собственный вектор $\mathcal{P}_{G_l^{(\mathbf{a})}}$ с собственным значением $1$ вида
+\[
+|\Psi_{\text{sup}}^{(l)}\rangle = \frac{|A\rangle + e^{i\theta}|B\rangle}{\sqrt{2}}
+\]
+для некоторой фазы $\theta\in\mathbb{R}$.
+\end{theorem}
+
+\begin{proof}
+Поскольку $R$ самосопряжённая инволюция, пространство $\mathcal{H}^{(\mathbf{a}_0)}$ раскладывается в прямую сумму $\mathcal{H}_+\oplus\mathcal{H}_-$ собственных подпространств с собственными значениями $+1$ и $-1$. Векторы $|+\rangle,|-\rangle$ образуют базис в $\mathrm{Span}\{|A\rangle,|B\rangle\}$, причём $|+\rangle\in\mathcal{H}_+$, $|-\rangle\in\mathcal{H}_-$. Коммутация $[\mathcal{P}_{G_l},R]=0$ означает, что $\mathcal{P}_{G_l}$ сохраняет это разложение и действует независимо в $\mathcal{H}_+$ и $\mathcal{H}_-$. Условие $\mathcal{P}_{G_l}(|A\rangle+|B\rangle)\neq 0$ эквивалентно $\mathcal{P}_{G_l}|+\rangle\neq 0$, так как $|A\rangle+|B\rangle=\sqrt{2}\,|+\rangle$. 
+
+Так как $\mathcal{P}_{G_l}$ является проектором, его собственные значения равны $0$ или $1$. Ненулевой вектор в $\mathcal{H}_+\cap \mathrm{Im}\,\mathcal{P}_{G_l}$, полученный из $\mathcal{P}_{G_l}|+\rangle$, после нормировки даёт собственный вектор с собственным значением $1$, лежащий в симметричном секторе. Любой вектор в $\mathcal{H}_+$ имеет вид $c(|A\rangle+e^{i\theta}|B\rangle)$ для некоторых $c\neq 0$ и $\theta\in\mathbb{R}$, что и даёт заявленную форму.
+\end{proof}

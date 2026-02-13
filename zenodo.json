@@ -1,0 +1,14 @@
+{
+  "title": "GRA Meta-Nullification and Superposition of Opposites",
+  "upload_type": "publication",
+  "publication_type": "article",
+  "description": "Formal theory and reference implementation of a multi-level GRA Meta-Nullification architecture for constructing coherent superpositions of conceptual opposites in a multiverse hierarchy.",
+  "creators": [
+    {
+      "name": "oleg bitsoev",
+      "orcid": "0009-0004-1872-1153"
+    }
+  ],
+  "access_right": "open",
+  "license": "cc-by-4.0"
+}
