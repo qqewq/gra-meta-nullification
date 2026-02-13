@@ -1,3 +1,4 @@
+Multilevel GRA Meta-Nullification architecture and reference implementation for constructing coherent superpositions of conceptual opposites in a multiverse hierarchy.
 # GRA Meta-Nullification and Superposition of Opposites
 
 This repository contains the formal theory and a reference implementation of a multi-level GRA Meta-Nullification architecture for constructing coherent superpositions of conceptual opposites (good/evil, history/counterfactual, evolution/alternative evolution, etc.) in a multiverse hierarchy.
@@ -12,3 +13,4 @@ MIT (or any other you prefer).
 
 ## Citation
 If you use this work, please cite the Zenodo record (see `zenodo.json` once the record is created).
+
